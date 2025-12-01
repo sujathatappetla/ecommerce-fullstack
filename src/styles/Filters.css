@@ -1,0 +1,78 @@
+/* src/styles/Filters.css */
+
+.filters-container {
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs row styling */
+.filters-row {
+  display: flex;
+  gap: 0.1rem;
+  width: 100%;
+}
+
+/* Common input + dropdown style */
+.filters-row input,
+.filters-row select {
+  height: 40px;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.92rem;
+}
+
+/* Search bar full width */
+.filters-row input[name="search"] {
+  width: 100%;
+}
+
+/* Category & Size select - medium width */
+.filters-row select {
+  width: 130px;
+}
+
+/* Min + Max small width inputs */
+.filters-row input[name="minPrice"],
+.filters-row input[name="maxPrice"] {
+  width: 120px;
+}
+
+/* Action buttons styling */
+.filters-actions {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.filters-actions button {
+  flex: 1;
+  height: 42px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+
+/* Responsive behaviour */
+@media (max-width: 768px) {
+  .filters-row {
+    flex-direction: column;
+  }
+
+  /* Inputs should be full width on mobile */
+  .filters-row input,
+  .filters-row select {
+    width: 100% !important;
+  }
+
+  .filters-actions {
+    flex-direction: column;
+  }
+
+  .filters-actions button {
+    width: 100%;
+  }
+}
